@@ -1,1 +1,1 @@
-window.location = 'https://www.toonshub.ml';
+//window.location = 'https://www.toonshub.ml';
