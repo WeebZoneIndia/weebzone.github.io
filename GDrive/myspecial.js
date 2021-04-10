@@ -1,2 +1,1 @@
-//window.location = 'https://www.toonshub.ml';
-document.body.innerHTML = document.body.innerHTML.replace(/ATOZ CARTOONIST/gi, "LOL; 
+document.getElementById("post-body").innerHTML = "You are a big LOL! Visit other sites for downloading cartoons.";
