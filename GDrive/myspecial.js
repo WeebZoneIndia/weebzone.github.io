@@ -1,1 +1,1 @@
-document.write('<!--');
+window.stop();
