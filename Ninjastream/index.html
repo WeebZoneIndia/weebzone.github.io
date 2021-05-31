@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+
+    <!-- CSS Tag -->
+    <link rel="icon" href="https://i.imgur.com/LpPCI3w.png" sizes="32x32" />
+<link rel="icon" href="https://i.imgur.com/LpPCI3w.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i.imgur.com/LpPCI3w.png" />
+<meta name="msapplication-TileImage" content="https://i.imgur.com/LpPCI3w.png" />
+    <link href="https://cdn.jsdelivr.net/gh/ToonsHub/beta@main/stream/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/gh/ToonsHub/beta@main/stream/jquery.min.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' rel='stylesheet' type="text/css"/>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+body{font-family: 'Balsamiq Sans', cursive!important;}
+</style>
+<style>
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+input{background-color:white;border:none;}
+tr{
+  border-bottom: 1px solid #878787; height:40px;}
+  button.download{display:inline-block;font-weight:400;color:#212529;text-align:center;vertical-align:middle;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border:1px solid transparent;padding:.375rem .75rem;font-size:1rem;line-height:1.5;border-radius:.25rem;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;color:#fff;background-color:#0069d9;border-color:#0062cc;box-shadow:0 0 0 .2rem rgba(38,143,255,.5)}
+  input[type=text] {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}textarea {
+	width: 50%;
+    min-width:300px;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
+}
+tr{border:0px;text-align:center;margin:20px}
+</style>
+
+<script>
+    var iframe = getUrlVars()["id"];
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+            vars[key] = value;
+        });
+        return vars;
+    }
+    var d = document;
+</script>		
+<script type="text/javascript">
+			function setIframeSource() {
+				var theSelect = document.getElementById('location');
+				var theIframe = document.getElementById('myIframe');
+				var theUrl;
+				
+				theUrl = theSelect.options[theSelect.selectedIndex].value;
+				theIframe.src = theUrl;
+			}
+		</script>
+    <style>
+        .video-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+        .video-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        .dynamic-content {
+            display: none;
+        }
+    </style><style>img{max-width:600px}
+hr{color:#aaaaaa}
+/* Style buttons */
+.btn {
+  background-color: DodgerBlue;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 18px;
+}
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: RoyalBlue;
+  color: white;
+}
+.resp-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%;
+}
+.resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+</style>
+    <title>Ninjastream - ToonsHub</title>
+   </head>
+<body class="min-vh-100 d-flex flex-column" data-theme="dark">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white border-bottom border-light fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="https://www.toonshub.ml/" title="ToonsHub">
+                <img src="https://cdn.jsdelivr.net/gh/ToonsHub/beta@main/logo.png" height="30"
+                    class="lazyload d-inline-block align-top" alt="ToonsHub">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                aria-controls="navbarResponsive" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="navbar-nav my-3 my-lg-0 order-2">
+                    <form id="quick_search_form" class="navbar-form input-group input-group-sm"
+                        action="https://www.toonshub.ml/search" method="get">
+                        <input type="text" value="" name="q" id="search" class="form-control"
+                            placeholder="[ToonsHub] Search..." autocomplete="off">
+                    </form>
+                </div>
+                <ul class="nav navbar-nav mr-auto order-1">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.toonshub.ml"><i class="fas fa-home fa-fw"></i> Home</a>
+                    </li>
+
+                        <a class="nav-link" href="https://discord.gg/2mPFKykW4j"><i class="fab fa-discord" aria-hidden="true"></i> &nbsp;Join Discord</a>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script>
+        $(document).ready(function () {
+            $("#notifications").modal('show');
+        });
+    </script>
+    <style>
+        .video-responsive {
+            overflow: hidden;
+            padding-bottom: 56.25%;
+            position: relative;
+            height: 0;
+        }
+        .video-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+        .dynamic-content {
+            display: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script type="text/javascript">
+        // Parse the URL parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+        // Give the parameter a variable name
+        var dynamicContent = getParameterByName('id');
+        $(document).ready(function () {
+            // Check if the URL parmeter is empty or not defined, display default content
+            if (dynamicContent == undefined || dynamicContent == '') {
+                $('#no-file').show();
+            }
+            // Check if the URL parameter is available or not.
+            else {
+                $('#play-download').show();
+            }
+        });
+    </script>
+    <div class="container">
+        <script language=javascript>
+            var theSelect, theIframe;
+            var today = new Date(),
+                number_of_day = today.getDay();
+            $(document).ready(function () {
+                //var today = new Date();
+                //var n = today.getDay();
+                theSelect = document.getElementById('location');
+                theIframe = document.getElementById('myIframe');
+                theUrl = theSelect.options[number_of_day].value;
+                theIframe.src = theUrl;
+            });
+            function setIframeSource() {
+                var theUrl;
+                if (theSelect.selectedIndex > 0) {
+                    theUrl = theSelect.options[theSelect.selectedIndex].value;
+                } else {
+                    theUrl = theSelect.options[number_of_day].value;
+                }
+                theIframe.src = theUrl;
+            }
+        </script>
+        <!-- Default Dynamic Section -->
+        <center><h1>NINJASTREAM - TOONSHUB</h1></center>
+        <div id="play-download" class="dynamic-content">
+            <SELECT class="custom-select" NAME="options" ONCHANGE="document.getElementById('youriframe').src = this.options[this.selectedIndex].value">
+            <script type="text/javascript">
+d.write('<option>Choose Player</option><option value="https://ninjastream.to/watch/'+iframe+'">Default Player</option>');</script>
+</SELECT><script type="text/javascript">d.write('<br/><br/><div class="resp-container"> <iframe class="resp-iframe" id="youriframe" src="https://ninjastream.to/watch/'+iframe+'" gesture="media" allow="encrypted-media" allowfullscreen="" mozallowfullscreen="true" webkitallowfullscreen="true" sandboxscrolling="no" sandbox="allow-scripts allow-same-origin"></iframe></div><hr/><center><a class="btn btn-warning large mr-2 mt-1 waves-effect waves-light" href="https://ninjastream.to/download/'+iframe+'" target="_blank">Download The Video</a></center><br/>')
+</script>
+        </div>
+        <!-- Dynamic Section Starts -->
+        <div id="no-file" class="dynamic-content">
+            <center><a href="/" class="btn btn-primary mt-1 mr-2 waves-effect waves-light" target="_blank">Visit  ToonsHub</a></center>
+        </div>
+        <!-- Dynamic Section Ends   -->
+        
+        
+    </div>
+    <footer class="mt-auto bg-light">
+        <div class="container py-3">
+            <p class="text-center text-muted">ToonServer is affiliated to <a href="/">ToonsHub</a>. And does not host any files on it’s servers. All files or contents hosted on third party
+                websites. <a href="/">ToonsHub</a> does not accept responsibility for contents
+                hosted on third party websites. We just index those links which are already available in internet.</p>
+            <p class="m-0 text-center text-muted">Copyright &copy; 2021 <a class="skul"
+                    href="/">ToonsHub</a></p>
+        </div>
+    </footer>
+    <script async="async" type="text/javascript" src="https://toonshub.github.io/beta/stream/menu.js"></script>
+</body>
+</html>
